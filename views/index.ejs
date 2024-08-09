@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Audio Call</title>
 </head>
 <body>
-    <h1>hello</h1>
     <video class="local" autoplay="true"></video>
-    <video class="remote" autoplay="true"></video>
-    <input type="text" class="room_name">
-    <button onclick="handleJoin()">Join</button>
-    <button onclick="handleCreate()">Create</button>
-    <script src="/socket.io/socket.io.js"></script>
+    <div class="remote">
+       <button id="mutebtn" onclick="handleMute()">Mute</button>
+    </div>
+    <input type="text" class="input">
+    <button onclick="handlejoin()">join</button>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>    
     <script src="js/index.js"></script>
 </body>
 </html>
